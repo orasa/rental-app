@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buildings</title>
+</head>
+<body>
+    <h1>Buildings</h1>
+    <ul>
+        <% buildings.forEach(function(building) { %>
+            <li><a href="/buildings/<%= building._id %>"><%= building.name %></a></li>
+        <% }); %>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit <%= unit.number %></title>
+</head>
+<body>
+    <h1>Unit <%= unit.number %></h1>
+    <p>Tenant: <%= unit.tenantName %></p>
+    <p>Rent Amount: <%= unit.rentAmount %></p>
+    <p>Due Date: <%= unit.dueDate.toDateString() %></p>
+    <p>Payment Status: <%= unit.paymentStatus %></p>
+    <h2>Payment History</h2>
+    <ul>
+        <% unit.paymentHistory.forEach(function(payment) { %>
+            <li><%= payment.date.toDateString() %> - $<%= payment.amount %></li>
+        <% }); %>
+    </ul>
+</body>
+</html>

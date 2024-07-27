@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Units in <%= building.name %></title>
+</head>
+<body>
+    <h1>Units in <%= building.name %></h1>
+    <ul>
+        <% building.units.forEach(function(unit) { %>
+            <li><a href="/units/<%= unit._id %>">Unit <%= unit.number %></a></li>
+        <% }); %>
+    </ul>
+</body>
+</html>
